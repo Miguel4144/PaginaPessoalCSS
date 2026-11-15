@@ -1,0 +1,430 @@
+/* Estilos gerais */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #0b0a09;
+    color: #e8ddc8;
+    font-family: "Work Sans", "Segoe UI", sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, .navbar__logo, .btn, .home-page a {
+    font-family: "Cinzel", Georgia, serif;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+h1, h2, h3 {
+    color: #ecd39c;
+    line-height: 1.2;
+    text-shadow: 0 2px 0 #0b0a09;
+}
+
+a {
+    color: #e4ca91;
+}
+
+a:hover, a:focus {
+    color: #8ce4d4;
+}
+
+a:active {
+    color: #fff2ce;
+}
+
+.container {
+    width: 94%;
+    max-width: 67rem;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+.navbar {
+    background-color: #100e0c;
+    border: 3px double #775c36;
+    box-shadow: inset 0 -5px 12px #090807;
+}
+
+.navbar__inner, .navbar__links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 1rem;
+}
+
+.navbar__inner {
+    justify-content: space-between;
+    padding: 0.65rem 0;
+}
+
+.navbar__logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+}
+
+.navbar__links {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar__links li {
+    display: flex;
+}
+
+.navbar__links a {
+    padding: 0.36rem 0.55rem;
+    border: 1px solid #3d3021;
+    font-size: 0.88rem;
+    text-decoration: none;
+}
+
+.navbar__links a:hover, .navbar__links a:focus {
+    background-color: #152721;
+    border: 1px solid #4a917e;
+}
+
+.navbar__links a:active {
+    background-color: #275144;
+}
+
+/* Apresentação pessoal */
+.hero, .home-page {
+    background-color: #171411;
+    background-image: url("biblioteca.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero {
+    padding: 3rem 0;
+    border: 3px double #604b30;
+}
+
+.hero__path {
+    display: none;
+}
+
+.hero__inner, .home-page main {
+    background-color: rgba(12, 13, 11, 0.95);
+    border: 5px double #a8864b;
+    border-radius: 0.7rem 0.2rem;
+    box-shadow: inset 0 0 0 4px #261e13, inset 0 0 46px #211a12, 0 0 25px #0b0a09;
+}
+
+.hero__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 58rem;
+    padding: 1.5rem 4%;
+}
+
+.hero__photo-wrap {
+    width: 13rem;
+    max-width: 100%;
+    padding: 0.5rem;
+    background-color: #15110d;
+    border: 4px double #a8864b;
+    border-radius: 0.5rem 0.15rem;
+    box-shadow: inset 0 0 0 2px #30271a, 0 0 17px rgba(168, 134, 75, 0.25);
+    text-align: center;
+}
+
+.hero__photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #795e38;
+}
+
+.hero__photo-tag {
+    display: block;
+    margin: 0.45rem 0 0;
+    padding: 0.24rem;
+    background-color: #241c13;
+    border: 1px solid #795e38;
+    color: #e0c591;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.hero__text {
+    width: 30rem;
+    max-width: 100%;
+}
+
+.hero__kicker, .section__eyebrow {
+    display: inline-block;
+    padding: 0.2rem 0.55rem;
+    background-color: #10201b;
+    border: 1px solid #427965;
+    color: #8ce4d4;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-shadow: 0 0 8px rgba(57, 185, 166, 0.5);
+    text-transform: uppercase;
+}
+
+.hero h1, .home-page h1 {
+    margin: 0.75rem 0 1rem;
+    font-size: 2.5rem;
+    text-shadow: 0 2px 0 #0b0a09, 0 0 20px rgba(216, 189, 130, 0.22);
+}
+
+.hero__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+    padding: 0.7rem 0.75rem;
+    background-color: #171814;
+    border: 3px double #695336;
+    color: #e8ddc8;
+    font-size: 0.94rem;
+}
+
+/* Seções do acervo */
+.section {
+    padding: 1.6rem 0;
+}
+
+.section--alt {
+    background-color: #0e120f;
+}
+
+.section .container {
+    padding: 1.2rem 3%;
+    background-color: #15120f;
+    border: 4px double #755b36;
+    border-radius: 0.65rem 0.2rem;
+    box-shadow: inset 0 0 0 3px #211b14, 0 6px 18px #080706;
+}
+
+.section__title {
+    margin: 0.5rem 0 1rem;
+    font-size: 1.85rem;
+}
+
+.curiosities, .places-grid {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    justify-content: space-between;
+    gap: 0.65rem 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Em cada grade de duas colunas, a última carta fica centralizada. */
+.curiosity-card:nth-child(5), .place-card:nth-child(3) {
+    width: 100%;
+    margin: 0 0 0 52%;
+}
+
+/* Curiosidades */
+.curiosity-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0.4rem;
+    background-color: #211c18;
+    border: 3px double #9d7743;
+    border-radius: 0.55rem 0.15rem;
+    box-shadow: inset 0 0 0 2px #392a1a, inset 0 0 20px #15110e;
+    text-align: center;
+}
+
+.curiosity-card:hover {
+    background-color: #212821;
+    border: 3px double #62ae9a;
+    box-shadow: inset 0 0 16px #17201b, 0 0 12px rgba(57, 185, 166, 0.3);
+}
+
+.curiosity-card p {
+    width: 14rem;
+    max-width: 100%;
+    font-size: 0.94rem;
+}
+
+.curiosity-card__img {
+    display: block;
+    width: 7rem;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #b38e56;
+}
+
+.curiosity-card:first-child .curiosity-card__img {
+    width: 5.25rem;
+}
+
+.curiosity-card--chip {
+    border: 3px double #558778;
+    box-shadow: inset 0 0 0 2px #22352d, inset 0 0 17px #0e1713;
+}
+
+.curiosity-card__icon {
+    display: block;
+    padding: 0.25rem 0.5rem;
+    background-color: #121b17;
+    border: 3px double #427965;
+    border-radius: 0.35rem 0.1rem;
+    font-size: 1.3rem;
+}
+
+/* Registros de viagem */
+.place-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    background-color: #211b15;
+    border: 3px double #a8864b;
+    border-radius: 0.55rem 0.15rem;
+    box-shadow: inset 0 0 0 2px #34281a;
+}
+
+.place-card__img-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.55rem;
+    padding: 0.5rem 0.2rem;
+    background-color: #0f0e0b;
+    border: 1px solid #665033;
+}
+
+.place-card__img {
+    display: block;
+    width: 100%;
+    max-width: 17rem;
+    height: auto;
+    border: 1px solid #5f513a;
+}
+
+#conhecidos .place-card {
+    background-color: #192019;
+    border: 3px double #77845b;
+    box-shadow: inset 0 0 0 2px #2d3b2c;
+}
+
+#conhecidos .place-card:first-child .place-card__img {
+    max-width: 8rem;
+}
+
+.place-card__stamp {
+    display: inline-block;
+    padding: 0.16rem 0.55rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.place-card__stamp--visited {
+    background-color: #163327;
+    border: 1px solid #528368;
+    color: #a7dfbd;
+}
+
+.place-card__stamp--dream {
+    background-color: #362715;
+    border: 1px solid #a8864b;
+    color: #f0d198;
+}
+
+.place-card__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.55rem;
+    margin: auto 0 0;
+    padding: 0.7rem 0 0.2rem;
+    text-align: center;
+}
+
+.place-card__body h3 {
+    font-size: 1rem;
+}
+
+/* Botões e estados */
+.btn, .home-page a {
+    display: inline-block;
+    max-width: 100%;
+    padding: 0.55rem 0.9rem;
+    background-color: #211a12;
+    background-image: url("moldura-bronze.png");
+    background-size: 100% 260%;
+    background-position: center;
+    border: 1px solid #694f2d;
+    border-radius: 0.3rem;
+    box-shadow: inset 0 0 8px #46341c, 0 2px 5px #090806;
+    color: #f1d59f;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 2px #0b0a09;
+}
+
+.btn:hover, .btn:focus, .home-page a:hover, .home-page a:focus {
+    background-color: #142921;
+    border: 1px solid #71beab;
+    box-shadow: inset 0 0 0 1px #284e43, 0 0 12px rgba(57, 185, 166, 0.35);
+    color: #a7f0df;
+}
+
+.btn:active, .home-page a:active {
+    background-color: #315e51;
+    border: 1px solid #afe8d7;
+    box-shadow: inset 0 2px 7px #14241f;
+    color: #fff2ce;
+}
+
+/* Rodapé */
+.footer {
+    padding: 0.95rem 0;
+    background-color: #0c0b09;
+    border: 3px double #775c36;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+/* Entrada do acervo (index.html) */
+.home-page {
+    height: 100vh;
+    padding: 24vh 0 8vh;
+    text-align: center;
+}
+
+.home-page main {
+    width: 92%;
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 1.5rem 5% 2rem;
+}
+
+.home-page a {
+    padding: 0.65rem 12%;
+    background-color: #141c18;
+    color: #b7e1d8;
+    font-size: 0.92rem;
+}
